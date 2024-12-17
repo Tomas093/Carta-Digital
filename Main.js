@@ -1,5 +1,5 @@
 const SHEET_ID = '1NKhXd-lW30E8ddCUa8ZCfsTt6Q2XOKcAwpAzDcGnQIo';
-const SHEET_TITLE = 'Platos';
+const SHEET_TITLE = 'Comidas';
 const SHEET_RANGE = 'A:C';
 
 const FULL_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?sheet=${SHEET_TITLE}&range=${SHEET_RANGE}`;
