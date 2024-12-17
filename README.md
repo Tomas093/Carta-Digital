@@ -1,4 +1,4 @@
-# Sheets_To_JS
+#Carta Digital
 
 
-How to pull data from google sheets to javascript where u can specify exact range & sheet.
+Google Sheets: https://docs.google.com/spreadsheets/d/1NKhXd-lW30E8ddCUa8ZCfsTt6Q2XOKcAwpAzDcGnQIo/edit?hl=es&gid=0#gid=0
