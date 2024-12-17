@@ -1,10 +1,43 @@
-/* Estilos generales */
-.menu-item {
+/* Navbar sticky */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Secciones */
+  .menu-section {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 3rem 0;
+    text-align: center;
+    background: url('Img/fondo.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+  /* Platos con animación de aparición */
+  .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
     border-bottom: 1px solid #f3ece7;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .menu-item.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
   
   .menu-info {
@@ -22,10 +55,9 @@
     color: #976b4e;
   }
   
-  /* Estilo único para los precios */
   .menu-price {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #d97706; /* Cambia este color según lo que necesites */
+    color: #d97706; /* Ajusta el color */
   }
   
