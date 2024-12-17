@@ -1,47 +1,87 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menú Dinámico</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900&display=swap"
+    />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body class="bg-[#fcfaf8] text-[#1b130e]" style='font-family: "Epilogue", "Noto Sans", sans-serif;'>
     <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#menuComidas">Comidas</a></li>
-                <li><a href="#menuPostres">Postres</a></li>
-                <li><a href="#menuBebidas">Bebidas</a></li>
-                <li><a href="#menuEntradas">Entradas</a></li>
-            </ul>
-        </nav>
+    <header class="border-b border-[#f3ece7] px-10 py-4">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Menú Dinámico</h1>
+        <ul class="flex gap-8">
+          <li>
+            <a href="#menuComidas" class="text-lg font-medium hover:text-[#976b4e]">Comidas</a>
+          </li>
+          <li>
+            <a href="#menuPostres" class="text-lg font-medium hover:text-[#976b4e]">Postres</a>
+          </li>
+          <li>
+            <a href="#menuBebidas" class="text-lg font-medium hover:text-[#976b4e]">Bebidas</a>
+          </li>
+          <li>
+            <a href="#menuEntradas" class="text-lg font-medium hover:text-[#976b4e]">Entradas</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <h1>Menú Dinámico</h1>
-
     <!-- Menú Secciones -->
-    <section id="menuComidas"><h2>Comidas</h2></section>
+    <main class="px-10 py-6">
+      <!-- Secciones dinámicas -->
+      <section id="menuComidas" class="py-5">
+        <h2 class="text-3xl font-bold pb-3">Comidas</h2>
+      </section>
 
-    <section id="menuPostres"><h2>Postres</h2></section>
+      <section id="menuPostres" class="py-5">
+        <h2 class="text-3xl font-bold pb-3">Postres</h2>
+      </section>
 
-    <section id="menuBebidas"><h2>Bebidas</h2></section>
+      <section id="menuBebidas" class="py-5">
+        <h2 class="text-3xl font-bold pb-3">Bebidas</h2>
+      </section>
 
-    <section id="menuEntradas"><h2>Entradas</h2></section>
+      <section id="menuEntradas" class="py-5">
+        <h2 class="text-3xl font-bold pb-3">Entradas</h2>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="social-links">
-            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        </div>
+    <footer class="border-t border-[#f3ece7] px-10 py-4">
+      <div class="flex justify-center gap-6 text-[#976b4e]">
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fab fa-facebook-f text-2xl"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank">
+          <i class="fab fa-twitter text-2xl"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+          <i class="fab fa-linkedin-in text-2xl"></i>
+        </a>
+      </div>
     </footer>
 
+    <!-- Script principal -->
     <script src="Main.js"></script>
-</body>
+  </body>
 </html>
