@@ -5,13 +5,8 @@ header {
     background-color: #ffffff;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Secciones */
-  .menu-section {
-    margin-bottom: 2rem;
-  }
-  
+}
+
   .section-title {
     font-size: 2rem;
     font-weight: 700;
@@ -26,7 +21,7 @@ header {
   /* Platos con animación de aparición */
   .menu-item {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Distribuye los elementos */
     align-items: center;
     padding: 1rem 0;
     border-bottom: 1px solid #f3ece7;
@@ -40,11 +35,14 @@ header {
     transform: translateY(0);
   }
   
+  /* Información del plato */
   .menu-info {
     display: flex;
     flex-direction: column;
   }
-  
+
+
+
   .menu-title {
     font-size: 1.125rem;
     font-weight: 600;
@@ -55,9 +53,34 @@ header {
     color: #976b4e;
   }
   
+  /* Precio */
   .menu-price {
     font-size: 1.125rem;
     font-weight: 600;
-    color: #d97706; /* Ajusta el color */
+    color: #d97706;
+    white-space: nowrap; /* Evita saltos de línea en el precio */
+    margin-left: 1rem; /* Espacio entre info y precio */
+  }
+  
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 1.5rem;
+      padding: 1.5rem 0;
+    }
+  
+    .menu-item {
+      flex-direction: row; /* Mantiene los elementos en fila */
+      align-items: center;
+    }
+  
+    .menu-info {
+      flex: 1; /* Ocupa el espacio restante */
+    }
+  
+    .menu-price {
+      text-align: right;
+      margin-left: 1rem;
+    }
   }
   
