@@ -74,7 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
+// Código existente
 document.getElementById('menu-toggle').addEventListener('click', () => {
   const menu = document.getElementById('menu');
   menu.classList.toggle('hidden');
+});
+
+// Nuevo código para cerrar el menú al hacer clic en un enlace
+document.querySelectorAll('#menu li a').forEach(link => {
+  link.addEventListener('click', () => {
+    const menu = document.getElementById('menu');
+    const menuToggle = document.getElementById('menu-toggle');
+    
+    // Solo cerrar el menú si está en modo móvil (cuando el botón de toggle está visible)
+    if (window.getComputedStyle(menuToggle).display !== 'none') {
+      menu.classList.add('hidden');
+    }
+  });
 });
