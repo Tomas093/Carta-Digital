@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     Entradas: document.getElementById('menuEntradas'),
   };
 
+  // Intersection Observer para animaciones
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.1 });
 
+  // Procesar cada hoja del documento
   SHEET_TITLES.forEach(sheetTitle => {
     const FULL_URL = buildSheetURL(sheetTitle);
     const container = sectionContainer[sheetTitle];
@@ -45,6 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const descripcion = rows[i].c[1]?.v || 'Descripción no disponible';
           const precio = rows[i].c[2]?.v ? `$${rows[i].c[2].v}` : 'Precio no disponible';
 
+          // Crear elementos dinámicamente
           const platoElemento = document.createElement('div');
           platoElemento.className = 'plato-item hidden';
 
@@ -59,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
           descripcionElemento.className = 'plato-descripcion';
           descripcionElemento.textContent = descripcion;
 
+          // Agregar elementos al contenedor
           platoElemento.appendChild(nombrePrecioElemento);
           platoElemento.appendChild(descripcionElemento);
           container.appendChild(platoElemento);

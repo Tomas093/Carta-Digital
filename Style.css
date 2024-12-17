@@ -1,64 +1,112 @@
-/* Modern, Responsive Menu Styling */
+/* Estilos base */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f4f6f9;
-    line-height: 1.6;
+    background-color: #e2d3a5;
     margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Encabezado */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
-#menuPlatos {
+header nav ul {
     display: flex;
-    flex-direction: column;
-    gap: 25px;
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 0 15px;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.plato-item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: 
-        opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), 
-        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 
-        0 10px 25px rgba(0, 0, 0, 0.08), 
-        0 5px 10px rgba(0, 0, 0, 0.04);
-    padding: 25px;
-    border: none;
-    position: relative;
-    overflow: hidden;
+header nav ul li {
+    font-size: 1.1rem;
 }
 
-.plato-nombre {
-    font-size: 1.4rem;
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
     font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 10px;
-    letter-spacing: -0.5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #e7e7e7;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
-.plato-precio {
-    font-size: 1.2rem;
+header nav ul li a:hover {
+    color: white;
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #27ae60;
-    background-color: rgba(39, 174, 96, 0.1);
-    padding: 3px 8px;
-    border-radius: 6px;
-    margin-left: 10px;
+    color: #333;
+    margin: 40px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.plato-descripcion {
-    font-size: 0.95rem;
-    color: #34495e;
-    opacity: 0.85;
-    margin-top: 10px;
+/* Secciones del menú */
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #614843;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Tarjetas del menú */
+.plato-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.plato-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plato-item h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.plato-item p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Animación de aparición al hacer scroll */
+.plato-item.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .plato-item.visible {
@@ -66,19 +114,79 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive Design */
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-links a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #27ae60;
+    transform: scale(1.1);
+}
+
+
+.plato-precio {
+    color: #57d928; /* Hace que los precios se vean verdes */
+    font-weight: bold; /* Opcional: para resaltar los precios */
+}
+
+.plato-item {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.plato-item.visible {
+    opacity: 1;
+}
+
+
+/* Estilos responsivos */
 @media screen and (max-width: 768px) {
-    #menuPlatos {
-        max-width: 100%;
-    }
-
-    .plato-nombre {
+    header nav ul {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
-    .plato-precio {
-        margin-left: 0;
-        margin-top: 5px;
+    header nav ul li a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header nav ul li {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    footer .social-links a {
+        font-size: 1.2rem;
     }
 }
