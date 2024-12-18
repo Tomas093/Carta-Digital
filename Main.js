@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     },
     {
-      root: null, // El viewport es el área raíz
+      root: null, // El viewport es el área raíz.
       threshold: 0.2, // Aparece cuando el 20% del elemento es visible
     }
   );
