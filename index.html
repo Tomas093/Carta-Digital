@@ -19,68 +19,77 @@
     />
     <link rel="stylesheet" href="Style.css" />
   </head>
-  <body class="bg-[#fcfaf8] text-[#1b130e]" style='font-family: "Epilogue", "Noto Sans", sans-serif;'>
+  <body class="text-[#1b130e]" style='font-family: "Epilogue", "Noto Sans", sans-serif;'>
     <!-- Header -->
-    <header class="border-b border-[#f3ece7] px-10 py-4 sticky top-0 bg-white shadow-md z-10">
-        <nav class="flex justify-between items-center relative">
-            <h1 class="text-2xl font-bold">Menú Dinámico</h1>
-            <button id="menu-toggle" class="lg:hidden text-2xl">
-              <i class="fas fa-bars"></i>
-            </button>
-            <ul id="menu" class="hidden lg:flex gap-8 flex-col lg:flex-row absolute lg:static top-full left-0 w-full lg:w-auto bg-white shadow-lg lg:shadow-none p-4 lg:p-0 z-20">
-              <li><a href="#menuComidas" class="text-lg font-medium hover:text-[#976b4e]">Comidas</a></li>
-              <li><a href="#menuPostres" class="text-lg font-medium hover:text-[#976b4e]">Postres</a></li>
-              <li><a href="#menuBebidas" class="text-lg font-medium hover:text-[#976b4e]">Bebidas</a></li>
-              <li><a href="#menuEntradas" class="text-lg font-medium hover:text-[#976b4e]">Entradas</a></li>
-            </ul>
-        </nav>
+    <header class="border-b border-[#f3ece7] px-6 py-2 sticky top-0 shadow-md z-10">
+      <nav class="flex justify-between items-center relative">
+        <h1 class="text-2xl font-bold">Menú Dinámico</h1>
+        <button id="menu-toggle" class="lg:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="menu" class="hidden lg:flex gap-6 flex-col lg:flex-row absolute lg:static top-full left-0 w-full lg:w-auto shadow-lg lg:shadow-none p-4 lg:p-0 z-20">
+          <li><a href="#menuComidas" class="text-lg font-medium hover:text-[#feb500]">Comidas</a></li>
+          <li><a href="#menuPostres" class="text-lg font-medium hover:text-[#feb500]">Postres</a></li>
+          <li><a href="#menuBebidas" class="text-lg font-medium hover:text-[#feb500]">Bebidas</a></li>
+          <li><a href="#menuEntradas" class="text-lg font-medium hover:text-[#feb500]">Entradas</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Menú Secciones -->
-    <main class="px-10 py-6">
-      <!-- Secciones dinámicas -->
-      <section id="menuComidas" class="menu-section">
-        <h2 class="section-title">Comidas</h2>
-      </section>
+    <main>
+      <h2 class="section-title px-4 py-2">Comidas</h2>
+      <div class="px-6 py-4">
+        <section id="menuComidas" class="menu-section">
+          <!-- Contenido dinámico para comidas -->
+        </section>
+      </div>
 
-      <section id="menuPostres" class="menu-section">
-        <h2 class="section-title">Postres</h2>
-      </section>
+      <h2 class="section-title px-4 py-2">Postres</h2>
+      <div class="px-6 py-4">
+        <section id="menuPostres" class="menu-section">
+          <!-- Contenido dinámico para postres -->
+        </section>
+      </div>
 
-      <section id="menuBebidas" class="menu-section">
-        <h2 class="section-title">Bebidas</h2>
-      </section>
+      <h2 class="section-title px-4 py-2">Bebidas</h2>
+      <div class="px-6 py-4">
+        <section id="menuBebidas" class="menu-section">
+          <!-- Contenido dinámico para bebidas -->
+        </section>
+      </div>
 
-      <section id="menuEntradas" class="menu-section">
-        <h2 class="section-title">Entradas</h2>
-      </section>
+      <h2 class="section-title px-4 py-2">Entradas</h2>
+      <div class="px-6 py-4">
+        <section id="menuEntradas" class="menu-section">
+          <!-- Contenido dinámico para entradas -->
+        </section>
+      </div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[#f3ece7] py-6 text-center">
-        <div class="flex justify-center items-center gap-6">
-          <!-- Redes Sociales -->
-          <a href="https://www.facebook.com" target="_blank" class="text-[#3b5998] text-2xl">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" class="text-[#1da1f2] text-2xl">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://instagram.com" target="_blank" class="text-[#e1306c] text-2xl">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://wa.me/1234567890" target="_blank" class="text-green-500 text-2xl">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-          <!-- Número de teléfono -->
-          <p class="text-lg font-medium text-[#976b4e]">
-            Tel: <a class="hover:underline">+1 234 567 890</a>
-          </p>
-        </div>
-        <p class="text-sm text-gray-600 mt-4">© 2024 Menú Dinámico. Todos los derechos reservados.</p>
-      </footer>
-      
-      
+    <footer class="py-6 text-center">
+      <div class="flex justify-center items-center gap-6">
+        <!-- Redes Sociales -->
+        <a href="https://www.facebook.com" target="_blank" class="text-[#3b5998] text-2xl">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="text-[#1da1f2] text-2xl">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="text-[#e1306c] text-2xl">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/1234567890" target="_blank" class="text-green-500 text-2xl">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Número de teléfono -->
+        <p class="text-lg font-medium text-[#976b4e]">
+          Tel: <a class="hover:underline">+1 234 567 890</a>
+        </p>
+      </div>
+      <p class="text-sm text-gray-600 mt-4">© 2024 Menú Dinámico. Todos los derechos reservados.</p>
+    </footer>
 
     <!-- Script principal -->
     <script src="Main.js"></script>

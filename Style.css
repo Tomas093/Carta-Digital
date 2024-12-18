@@ -2,20 +2,67 @@
 header {
   position: sticky;
   top: 0;
-  background-color: #ffffff;
+  background-color: rgb(26, 26, 26);
   z-index: 10;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffff;
+}
+
+/* Cambiar color de los hipervínculos al pasar el cursor */
+header a:hover {
+  color: #feb500; /* Amarillo de los títulos */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-image: url(Img/fondo.jpg);
+  background-repeat: repeat; /* Repeat the image if needed */
+  background-size: 50%; /* Reduce image size to 50% */
+  background-position: center; /* Center the background image */
+  background-attachment: fixed; /* Keep background fixed while scrolling */
+  position: relative; /* Add positioning for overlay */
+}
+
+/* Background overlay to reduce intensity */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* White overlay to reduce background intensity */
+  z-index: -1;
 }
 
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
-  padding: 1rem 0;
-  text-align: center;
-  background-color: #f6efd2;
-  background-size: cover;
+  padding: 0.5rem 0 0.5rem 0; /* Elimina padding izquierdo */
+  text-align: left;
+  padding-left: 50px;
+  margin-bottom: 0rem;
+
+  /* Fondo con degradado lineal */
+  background: linear-gradient(to right, #feb500 50%, transparent 50%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-left: 0; /* Asegura que no haya margen izquierdo */
+  margin-top: 10px;
+}
+
+/* New menu section container styling */
+.menu-section {
+  background-color: rgba(72, 72, 72, 0.491); /* Light gray with high transparency */
+  border-radius: 0; /* Removed rounded corners, making it square */
+  padding: 1rem;
+  margin-top: 0.25rem; /* Espaciado reducido */
+  margin-bottom: 0.5rem;
+  transition: background-color 0.3s ease; /* Smooth transition for color changes */
 }
 
 /* Platos con animación de aparición */
@@ -41,37 +88,80 @@ header {
   flex-direction: column;
 }
 
-
-
 .menu-title {
-  font-size: 1.125rem;
+  color: #ffff;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .menu-desc {
-  font-size: 0.875rem;
-  color: #976b4e;
+  font-size: 1rem;
+  color: rgb(162, 160, 160);
 }
 
 /* Precio */
 .menu-price {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: #d97706;
+  color: #fff;
   white-space: nowrap; /* Evita saltos de línea en el precio */
   margin-left: 1rem; /* Espacio entre info y precio */
+}
+
+/* Estilo para el menú desplegable */
+#menu {
+  background-color: rgb(26, 26, 26); /* Mismo color que el header */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra igual al header */
+  color: #ffff; /* Texto en blanco */
+  border-radius: 0.25rem; /* Bordes ligeramente redondeados */
+  padding: 1rem; /* Espaciado interno */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo de los enlaces en el menú desplegable */
+#menu li a {
+  display: block; /* Asegura que ocupen toda la línea */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  color: #fff; /* Texto blanco por defecto */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 500; /* Peso medio */
+}
+
+/* Cambiar color al pasar el cursor */
+#menu li a:hover {
+  color: #feb500; /* Amarillo igual al hover del header */
+}
+
+/* Mostrar el menú en pantallas grandes (ya está gestionado por Tailwind) */
+@media (min-width: 1024px) {
+  #menu {
+    background-color: transparent; /* Sin fondo en pantallas grandes */
+    box-shadow: none; /* Sin sombra en pantallas grandes */
+    padding: 0; /* Sin padding en pantallas grandes */
+  }
+
+  #menu li a {
+    padding: 0; /* Sin padding en enlaces de pantallas grandes */
+  }
 }
 
 /* Responsividad */
 @media (max-width: 768px) {
   .section-title {
     font-size: 1.5rem;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
+    margin-bottom: 0.25rem; /* Further reduced margin */
   }
 
   .menu-item {
     flex-direction: row; /* Mantiene los elementos en fila */
     align-items: center;
+  }
+
+  .menu-section {
+    padding: 0.75rem;
+    margin-top: 0.25rem; /* Reduced top margin */
+    margin-bottom: 0.5rem;
   }
 
   .menu-info {
@@ -82,4 +172,12 @@ header {
     text-align: right;
     margin-left: 1rem;
   }
+}
+
+/* Footer */
+footer {
+  background-color: rgba(26, 26, 26, 0.3);
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #ffff;
 }
