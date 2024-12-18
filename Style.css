@@ -1,86 +1,85 @@
 /* Navbar sticky */
 header {
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #f6efd2;
+  background-size: cover;
+}
+
+/* Platos con animación de aparición */
+.menu-item {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos */
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f3ece7;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.menu-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Información del plato */
+.menu-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.menu-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.menu-desc {
+  font-size: 0.875rem;
+  color: #976b4e;
+}
+
+/* Precio */
+.menu-price {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #d97706;
+  white-space: nowrap; /* Evita saltos de línea en el precio */
+  margin-left: 1rem; /* Espacio entre info y precio */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding: 3rem 0;
-    text-align: center;
-    background: url('Img/fondo.png') no-repeat center center;
-    background-size: cover;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
   }
-  
-  /* Platos con animación de aparición */
+
   .menu-item {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos */
+    flex-direction: row; /* Mantiene los elementos en fila */
     align-items: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid #f3ece7;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.8s ease-out;
   }
-  
-  .menu-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Información del plato */
+
   .menu-info {
-    display: flex;
-    flex-direction: column;
+    flex: 1; /* Ocupa el espacio restante */
   }
 
-
-
-  .menu-title {
-    font-size: 1.125rem;
-    font-weight: 600;
-  }
-  
-  .menu-desc {
-    font-size: 0.875rem;
-    color: #976b4e;
-  }
-  
-  /* Precio */
   .menu-price {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #d97706;
-    white-space: nowrap; /* Evita saltos de línea en el precio */
-    margin-left: 1rem; /* Espacio entre info y precio */
+    text-align: right;
+    margin-left: 1rem;
   }
-  
-  /* Responsividad */
-  @media (max-width: 768px) {
-    .section-title {
-      font-size: 1.5rem;
-      padding: 1.5rem 0;
-    }
-  
-    .menu-item {
-      flex-direction: row; /* Mantiene los elementos en fila */
-      align-items: center;
-    }
-  
-    .menu-info {
-      flex: 1; /* Ocupa el espacio restante */
-    }
-  
-    .menu-price {
-      text-align: right;
-      margin-left: 1rem;
-    }
-  }
-  
+}
